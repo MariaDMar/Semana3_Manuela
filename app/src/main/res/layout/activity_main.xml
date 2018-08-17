@@ -1,18 +1,72 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
+
+<!-- organizar los componentes de la aplicación -->
+<LinearLayout android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="#206abf"
+    android:gravity="center_horizontal">
+
+    <!-- Aqui van los componentes/ wrap es para que la altura se acomode al texto -->
+    <!-- Utilizo sp para texto y dp para las demás dimensiones -->
+    <!-- si pongo en width wrap se adapta al ancho del texto -->
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Masa"
+        android:textColorHint="#b6b6ad"
+        android:id="@+id/et_masa"
+        android:layout_marginLeft="25dp"
+        android:layout_marginRight="20dp"
+        android:background="#1F4A74"
+        android:padding="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="10dp"
+        />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Altura"
+        android:textColorHint="#b6b6ad"
+        android:id="@+id/et_altura"
+        android:layout_marginLeft="25dp"
+        android:layout_marginRight="20dp"
+        android:background="#1F4A74"
+        android:padding="10dp"
+        />
 
     <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Introduce los daros para calcular tu IMC"
+        android:textSize="15sp"
+        android:padding="10dp"
+        android:layout_margin="10dp"
+        android:gravity="center"
+        android:textColor="#FFFFFF"
+        android:id="@+id/tv_imc"
+        />
+
+    <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:text="CALCULAR"
+        android:id="@+id/btn_calcular"
+        />
 
-</android.support.constraint.ConstraintLayout>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Tu IMC es"
+        android:textSize="15sp"
+        android:padding="10dp"
+        android:layout_margin="10dp"
+        android:gravity="center"
+        android:textColor="#FFFFFF"
+        android:id="@+id/tv_resultado"
+        />
+
+</LinearLayout>
